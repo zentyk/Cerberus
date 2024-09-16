@@ -1,9 +1,7 @@
-
 #include <sys/types.h>
 #include <stdio.h>
-#include <stddef.h>
-#include <stdint.h>
-#include <psxgte.h>
+#include<psxetc.h>
+#include<psxgte.h>
 #include <psxgpu.h>
 
 //Define environment pairs and buffer counter
@@ -29,6 +27,10 @@ void init(){
 	PutDrawEnv(&draw[0]);
 
 	db=0;
+
+	//Load Font
+	FntLoad(960, 0);
+	FntOpen(0,181,320,50,2,100);
 }
 
 void display(){
@@ -48,6 +50,8 @@ int main (){
 	init();
 
 	while(1){
+		FntPrint(0,"System test...");
+		FntFlush(-1);
 		display();
 	}
 
