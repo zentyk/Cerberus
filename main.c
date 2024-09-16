@@ -19,8 +19,8 @@ void init(){
 	SetDefDrawEnv(&draw[0],0,240,320,240);
 	SetDefDrawEnv(&draw[1],0,0,320,240);
 	
-	setRGB0(&draw[0],63,0,127);
-	setRGB0(&draw[1],63,0,127);
+	setRGB0(&draw[0],63,0,12);
+	setRGB0(&draw[1],63,0,12);
 	
 	draw[0].isbg=1;
 	draw[1].isbg=1;
